@@ -8,7 +8,7 @@ Add to existing instruction files:
 bashcat avast-rules.md >> .cursorrules
 ```
 Create a git hook to ensure they're present:
-```bash
+```
 bash#!/bin/bash
 # Check for AVAST rules in AI instruction files
 if [ -f ".cursorrules" ] && ! grep -q "AVAST" .cursorrules; then
