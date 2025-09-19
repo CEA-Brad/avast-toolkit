@@ -53,3 +53,29 @@
    // NEVER generate like this:
    const crypto = require('crypto');
    const hashedPassword = crypto.createHash('sha256').update(password).digest('hex');
+```
+When generating database queries:
+```javascript
+   // ALWAYS generate like this:
+   const query = 'SELECT * FROM users WHERE id = ? AND active = ?';
+   db.query(query, [userId, true]);
+   
+   // NEVER generate like this:
+   const query = `SELECT * FROM users WHERE id = ${userId}`;
+```
+When handling user input:
+```javascript
+   // ALWAYS generate like this:
+   const sanitized = DOMPurify.sanitize(userInput);
+   element.textContent = sanitized;
+   
+   // NEVER generate like this:
+   element.innerHTML = userInput;
+```
+IMPORTANT: If you cannot follow these rules, you must:
+
+Add a comment explaining the security risk
+Add a TODO to fix the security issue
+Warn the user about the vulnerability
+
+Security > Functionality. Always.
