@@ -4,8 +4,10 @@ Agentic rules snippets and other tools for the AVAST AI-aware threat modelling f
 Implementation Strategy
 
 Add to existing instruction files:
+Use copilot-instructions.md for copilot, cursor-codex-claude.md for all others.
+Example:
 ```bash
-bashcat avast-rules.md >> .cursorrules
+bashcat cursor-claude-aider.md >> .cursorrules
 ```
 Create a git hook to ensure they're present:
 ```
