@@ -267,8 +267,8 @@ trust:
 ```mermaid
 graph TD
     A[Identify Components] --> B[Map Data Flows]
-    B --> C[Identify AI-Generated Code]
-    C --> D[Apply AVAST Categories]
+    B --> C[Identify threats with STRIDE]
+    C --> D[Apply AVAST similarly to STRIDE]
     D --> E[Generate Threat Matrix]
 ```
 
