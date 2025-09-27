@@ -1,6 +1,10 @@
 # Contributing to AVAST Framework
 
-First off, thank you for considering contributing to AVAST! It's people like you that make AVAST such a great tool for securing AI-generated code.
+First off, thank you for considering contributing to AVAST! It's people like you that make AVAST such a great threat modeling extension for securing AI-generated code.
+
+## About AVAST
+
+AVAST is a STRIDE+ extension - a threat modeling framework that complements STRIDE by adding AI-specific vulnerability categories. Your contributions help security practitioners worldwide better threat model AI-assisted development.
 
 ## Table of Contents
 - [Code of Conduct](#code-of-conduct)
@@ -41,6 +45,7 @@ When you discover a new vulnerability pattern in AI-generated code:
 
 **AI Tool:** GitHub Copilot v1.x
 **AVAST Category:** Validation
+**STRIDE Category:** Tampering/Information Disclosure
 
 **Prompt Used:**
 "Create a function to search users by name"
@@ -60,6 +65,9 @@ function searchUsers(name) {
 ```
 
 **Impact:** SQL Injection vulnerability
+
+**Threat Model Addition:**
+This pattern should be added to AVAST validation checks when threat modeling database interactions in AI-generated code.
 ```
 
 ### 💡 Suggesting Enhancements

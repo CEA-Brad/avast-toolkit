@@ -2,16 +2,78 @@
 
 ## Executive Summary
 
-The AVAST Framework is a specialized threat modeling methodology designed specifically for AI-assisted software development. Unlike traditional security frameworks that treat all code equally, AVAST recognizes and addresses the unique vulnerability patterns introduced by Large Language Models (LLMs) in code generation.
+AVAST is a threat modeling framework designed as a STRIDE+ extension specifically for AI-assisted software development. While STRIDE provides excellent general threat categorization (Spoofing, Tampering, Repudiation, Information Disclosure, Denial of Service, Elevation of Privilege), it's intentionally broad to cover all systems. Security practitioners have long used "STRIDE+" to append domain-specific threats they don't want to overlook.
+
+AVAST represents the natural evolution of STRIDE+ for the AI era. You should absolutely continue using STRIDE for comprehensive threat modeling, but append AVAST to ensure you're addressing the specific, predictable vulnerability patterns that AI consistently introduces into generated code.
 
 ## Table of Contents
-1. [Background and Motivation](#background-and-motivation)
-2. [Core Principles](#core-principles)
-3. [The AVAST Components](#the-avast-components)
-4. [Implementation Strategy](#implementation-strategy)
-5. [Threat Modeling Process](#threat-modeling-process)
-6. [Metrics and Measurement](#metrics-and-measurement)
-7. [Advanced Topics](#advanced-topics)
+
+1. [AVAST as a Threat Modeling Framework](#avast-as-a-threat-modeling-framework)
+2. [Background and Motivation](#background-and-motivation)
+3. [Core Principles](#core-principles)
+4. [The AVAST Components](#the-avast-components)
+5. [Implementation Strategy](#implementation-strategy)
+6. [Threat Modeling Process](#threat-modeling-process)
+7. [Metrics and Measurement](#metrics-and-measurement)
+8. [Case Studies](#case-studies)
+9. [Advanced Topics](#advanced-topics)
+
+## AVAST as a Threat Modeling Framework
+
+### The Evolution from STRIDE to STRIDE+ to AVAST
+
+**STRIDE** (developed by Microsoft) is the industry standard for threat modeling:
+- **S**poofing identity
+- **T**ampering with data
+- **R**epudiation
+- **I**nformation disclosure
+- **D**enial of service
+- **E**levation of privilege
+
+**STRIDE+** emerged as practitioners needed domain-specific extensions:
+- STRIDE + Cloud (adds multi-tenancy, shared responsibility)
+- STRIDE + IoT (adds physical access, firmware updates)
+- STRIDE + Mobile (adds device loss, app store threats)
+
+**AVAST** is STRIDE+ for AI-generated code:
+- **A**uthentication flaws (maps to Spoofing)
+- **V**alidation gaps (maps to Tampering/Information Disclosure)
+- **A**uditing deficiencies (maps to Repudiation)
+- **S**ecrets exposure (maps to Information Disclosure)
+- **T**rust boundary violations (maps to Elevation of Privilege)
+
+### Why AVAST Complements STRIDE
+
+STRIDE asks: "What can go wrong with this system?"
+AVAST asks: "What will AI get wrong when building this system?"
+
+Example threat modeling session:
+1. Apply STRIDE to identify general threats
+2. Apply AVAST to identify AI-specific vulnerabilities
+3. Combine findings for comprehensive coverage
+
+### Using STRIDE + AVAST Together
+
+```yaml
+threat_model:
+  component: User Authentication Service
+
+  stride_threats:
+    spoofing:
+      - Credential theft
+      - Session hijacking
+    tampering:
+      - Password modification
+      - Token manipulation
+
+  avast_threats:
+    authentication:
+      - AI will likely implement MD5 hashing
+      - AI won't implement rate limiting
+      - AI will store passwords in logs
+    validation:
+      - AI will concatenate SQL queries
+      - AI won't sanitize inputs
 
 ## Background and Motivation
 
