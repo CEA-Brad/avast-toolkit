@@ -1,11 +1,22 @@
 # 🚢 AVAST Framework
+> **A Threat Modeling Framework for AI-Generated Code (STRIDE+ for AI)**
+
 > **A**uthentication | **V**alidation | **A**uditing | **S**ecrets | **T**rust
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Security Framework](https://img.shields.io/badge/Security-Framework-orange)](https://github.com/CEA-Brad/avast-toolkit)
-[![AI Development](https://img.shields.io/badge/AI-Development-blue)](https://github.com/CEA-Brad/avast-toolkit)
+[![Threat Modeling](https://img.shields.io/badge/Threat%20Modeling-STRIDE%2B-orange)](https://github.com/CEA-Brad/avast-toolkit)
+[![AI Security](https://img.shields.io/badge/AI-Security-blue)](https://github.com/CEA-Brad/avast-toolkit)
 
-## 🎯 The Problem
+## 🎯 What is AVAST?
+
+AVAST is a threat modeling framework that extends STRIDE specifically for AI-generated code. If you're familiar with STRIDE (Spoofing, Tampering, Repudiation, Information Disclosure, Denial of Service, Elevation of Privilege), you know it's excellent but intentionally general. Security practitioners have long used "STRIDE+" to add domain-specific concerns:
+
+- **STRIDE + Cloud** for cloud-specific threats
+- **STRIDE + IoT** for embedded systems
+- **STRIDE + Mobile** for mobile applications
+- **STRIDE + AVAST** for AI-generated code ✨
+
+## 📊 The Problem
 
 AI-generated code is creating a security crisis:
 - **45%** of AI-generated code fails basic security tests
@@ -14,28 +25,51 @@ AI-generated code is creating a security crisis:
 
 Despite this, **83% of organizations** use AI to generate production code.
 
-AVAST is a specialized threat modeling framework designed specifically for AI-assisted development, providing a structured approach to identify and mitigate vulnerabilities before they reach production.
+AVAST provides the specific threat categories that AI consistently gets wrong, allowing you to maintain comprehensive STRIDE coverage while ensuring AI-specific vulnerabilities don't slip through.
 
-## 🌟 Why AVAST?
+## 🌟 Why Use STRIDE + AVAST?
 
-Traditional security tools weren't designed for AI-generated code. AVAST fills this gap by:
+When threat modeling AI-assisted development:
 
-✅ **Proactive Security**: Catch vulnerabilities before AI generates them
+1. **Start with STRIDE** for comprehensive threat coverage
+2. **Add AVAST** to catch what AI specifically gets wrong
+3. **Get complete coverage** without redundancy
+
+Benefits:
+✅ **Proactive Security**: Catch AI-specific vulnerabilities during threat modeling
 ✅ **Context-Aware**: Provides the security context AI models lack
 ✅ **Measurable Impact**: 67% reduction in production vulnerabilities
-✅ **Developer-Friendly**: Integrates seamlessly with existing AI coding tools
+✅ **Industry Standard**: Builds on STRIDE, not replacing it
 
-## 📊 Framework Overview
+## 📊 The AVAST Components
 
-AVAST focuses on the five most critical vulnerability categories in AI-generated code:
+AVAST extends your STRIDE threat model with five AI-specific vulnerability categories:
 
-| Component | Description | Common AI Failures |
-|-----------|-------------|-------------------|
-| **Authentication** | Identity verification and session management | Hardcoded credentials, weak session handling |
-| **Validation** | Input sanitization and data validation | SQL injection, XSS vulnerabilities |
-| **Auditing** | Logging and monitoring | Sensitive data exposure, insufficient logging |
-| **Secrets** | Credential and key management | Secrets in code, plaintext storage |
-| **Trust** | Boundary validation and authorization | Missing authorization, privilege escalation |
+| AVAST Component | STRIDE Mapping | Description | Common AI Failures |
+|-----------------|----------------|-------------|-------------------|
+| **Authentication** | Spoofing | Identity verification and session management | Hardcoded credentials, weak session handling |
+| **Validation** | Tampering, Info Disclosure | Input sanitization and data validation | SQL injection, XSS vulnerabilities |
+| **Auditing** | Repudiation | Logging and monitoring | Sensitive data exposure, insufficient logging |
+| **Secrets** | Information Disclosure | Credential and key management | Secrets in code, plaintext storage |
+| **Trust** | Elevation of Privilege | Boundary validation and authorization | Missing authorization, privilege escalation |
+
+### How to Use STRIDE + AVAST
+
+```yaml
+# Traditional STRIDE threat model
+stride_analysis:
+  spoofing: [Check authentication mechanisms]
+  tampering: [Verify data integrity]
+  repudiation: [Ensure audit trails]
+
+# Add AVAST for AI-specific threats
+avast_analysis:
+  authentication: [AI won't implement rate limiting]
+  validation: [AI will concatenate SQL queries]
+  auditing: [AI will log passwords]
+  secrets: [AI will hardcode API keys]
+  trust: [AI will trust client-side validation]
+```
 
 ## 🚀 Quick Start
 
