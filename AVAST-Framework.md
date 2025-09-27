@@ -7,6 +7,7 @@ AVAST is a threat modeling framework designed as a STRIDE+ extension specificall
 AVAST represents the natural evolution of STRIDE+ for the AI era. You should absolutely continue using STRIDE for comprehensive threat modeling, but append AVAST to ensure you're addressing the specific, predictable vulnerability patterns that AI consistently introduces into generated code.
 
 ## Table of Contents
+
 1. [AVAST as a Threat Modeling Framework](#avast-as-a-threat-modeling-framework)
 2. [Background and Motivation](#background-and-motivation)
 3. [Core Principles](#core-principles)
@@ -327,8 +328,8 @@ trust:
 ```mermaid
 graph TD
     A[Identify Components] --> B[Map Data Flows]
-    B --> C[Identify AI-Generated Code]
-    C --> D[Apply AVAST Categories]
+    B --> C[Identify threats with STRIDE]
+    C --> D[Apply AVAST similarly to STRIDE]
     D --> E[Generate Threat Matrix]
 ```
 
@@ -391,34 +392,6 @@ weekly_metrics:
     security_training_completion: 95%
     satisfaction_score: 4.2/5
 ```
-
-## Case Studies
-
-### Case Study 1: E-Commerce Platform
-**Challenge**: 200+ vulnerabilities in AI-generated checkout flow
-
-**AVAST Implementation**:
-- Added validation rules to AI prompts
-- Implemented pre-generation threat modeling
-- Created secure code templates
-
-**Results**:
-- 75% reduction in vulnerabilities
-- 50% faster security review process
-- Zero critical issues in production
-
-### Case Study 2: Financial Services API
-**Challenge**: Compliance failures due to insufficient auditing
-
-**AVAST Implementation**:
-- Enhanced auditing requirements in AI instructions
-- Automated compliance checking
-- Security-first prompt engineering
-
-**Results**:
-- 100% audit compliance achieved
-- 60% reduction in remediation costs
-- Passed regulatory review first attempt
 
 ## Advanced Topics
 
