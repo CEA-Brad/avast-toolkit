@@ -191,8 +191,8 @@ Security Architect & AI Security Researcher
 
 - 📧 Email: brad.tenenholtz@gmail.com
 - 💼 LinkedIn: [Brad Tenenholtz](https://www.linkedin.com/in/the-real-brad-tenenholtz/)
-- 🐦 Twitter: [@bradtenenholtz](https://twitter.com/bradtenenholtz)
-- 🎤 Speaker: CornCon 2025, DevSecOps conferences
+- 🐦 Twitter: [@bradtenenholtz]([https://twitter.com/bradtenenholtz](https://x.com/bradten))
+- 🎤 Speaker: CornCon, ICS Cybersecurity Conference, Critical Infrastructure Protection & Resilience North America
 
 ### Background
 With over a decade of experience in application security and threat modeling, I developed AVAST after observing the exponential increase in AI-generated vulnerabilities across enterprise codebases. This framework represents the synthesis of traditional security principles adapted for the AI development era.
