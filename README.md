@@ -191,7 +191,7 @@ Security Architect & AI Security Researcher
 
 - 📧 Email: brad.tenenholtz@gmail.com
 - 💼 LinkedIn: [Brad Tenenholtz](https://www.linkedin.com/in/the-real-brad-tenenholtz/)
-- 🐦 Twitter: [@bradtenenholtz]([https://twitter.com/bradtenenholtz](https://x.com/bradten))
+- 🐦 Twitter: [@bradten](https://x.com/bradten)
 - 🎤 Speaker: CornCon, ICS Cybersecurity Conference, Critical Infrastructure Protection & Resilience North America
 
 ### Background
