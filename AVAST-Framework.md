@@ -11,8 +11,7 @@ The AVAST Framework is a specialized threat modeling methodology designed specif
 4. [Implementation Strategy](#implementation-strategy)
 5. [Threat Modeling Process](#threat-modeling-process)
 6. [Metrics and Measurement](#metrics-and-measurement)
-7. [Case Studies](#case-studies)
-8. [Advanced Topics](#advanced-topics)
+7. [Advanced Topics](#advanced-topics)
 
 ## Background and Motivation
 
@@ -331,34 +330,6 @@ weekly_metrics:
     security_training_completion: 95%
     satisfaction_score: 4.2/5
 ```
-
-## Case Studies
-
-### Case Study 1: E-Commerce Platform
-**Challenge**: 200+ vulnerabilities in AI-generated checkout flow
-
-**AVAST Implementation**:
-- Added validation rules to AI prompts
-- Implemented pre-generation threat modeling
-- Created secure code templates
-
-**Results**:
-- 75% reduction in vulnerabilities
-- 50% faster security review process
-- Zero critical issues in production
-
-### Case Study 2: Financial Services API
-**Challenge**: Compliance failures due to insufficient auditing
-
-**AVAST Implementation**:
-- Enhanced auditing requirements in AI instructions
-- Automated compliance checking
-- Security-first prompt engineering
-
-**Results**:
-- 100% audit compliance achieved
-- 60% reduction in remediation costs
-- Passed regulatory review first attempt
 
 ## Advanced Topics
 
